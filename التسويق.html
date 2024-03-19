@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <title>Ocoda - النسويق</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="content/assets/img/Butterfly.svg">
+  <!-- Bootstrap 5  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.rtl.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+
+  <!-- Owl Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" media="all">
+  <link rel="preconnect" href="https://fonts.gstatic.com" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500&display=swap" rel="stylesheet" media="all">
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="content/css/main-rtl.css" media="all" />
+</head>
+
+<body>
+  <!-- start video modal -->
+  <div class="popup-window">
+    <i class="close-vid-btn fa-solid fa-xmark"></i>
+    <iframe class="lazy" src="" title="" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"></iframe>
+  </div>
+  <!-- end video modal -->
+
+  <!-- start Modal for form -->
+  <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header justify-content-start gap-3">
+          <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5 main-color" id="formModalLabel">اطلب الخدمه الان</h1>
+        </div>
+        <div class="modal-body">
+          <div class="contact__form">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الاسم</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="الاسم"
+                    required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رابط الشركة</label>
+                  <input type="url" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="رابط الشركة">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">البريد الالكتروني</label>
+                  <input type="email" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder="البريد الالكتروني">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رقم الهاتف</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder=" رقم الهاتف">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الخدمه</label>
+                  <select name="" id="" class="form-select">
+                    <option value="خدمه1">خدمه 1</option>
+                    <option value="2خدمه">خدمه 2</option>
+                    <option value="3خدمه">خدمه 3</option>
+                    <option value="4خدمه">خدمه 4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رسالتك</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="اكتب رسالتك...."></input>
+                </div>
+                <div class="col-lg-4">
+                  <button class="main-link d-inline-block mt-3">
+                    ارسل
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- end Modal for form -->
+
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-lg align-items-center">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img data-src="content/assets/img/logos/1.png" alt="Logo" class="d-inline-block align-text-top lazy"
+          height="100%" width="100%">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav text-md-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              خدماتنا
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="تصميم_المواقع.html">خدمات تصميم المواقع</a></li>
+              <li><a class="dropdown-item" href="تصميم_الجرافيك.html">خدمات تصميم الجرافيك</a></li>
+              <li><a class="dropdown-item" href="التسويق.html">خدمات التسويق </a></li>
+              <li><a class="dropdown-item" href="سوشيال_ميديا.html">خدمات السوشيال ميديا</a></li>
+              <li><a class="dropdown-item" href="السيو.html">خدمات السيو</a></li>
+              <li><a class="dropdown-item" href="الموشن_جرافيك.html">خدمات الموشن جرافيك</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="من_نحن.html">عن الشركة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">المدونه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="content/profile.pdf" target="_blank">بروفايل الشركه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="تواصل_معنا.html">تواصل معنا</a>
+          </li>
+        </ul>
+        <div class="navbar__links d-flex gap-4 justify-content-center">
+          <a href="#" class="main-color">
+            <span>en</span>
+            <i class="fa fa-globe" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+" class="main-color">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- start header -->
+  <header class="header mb-3">
+    <div class="container">
+      <div class="row align-items-center ">
+        <div class="col-12 col-lg-6">
+          <div class="header__text mb-5">
+            <h1 class="header__text__title">خدمة تصميم التسويق الالكتروني </h1>
+            <p class="header__text__desc">هى حجر الاساس لتعزيز ثقه ،مصداقية،ومكانة علامتك التجارية الرئيسية خدمة تصميم
+              الهوية التجارية</p>
+          </div>
+          <div class="d-flex gap-5 align-items-center d-lg-flex d-none">
+            <a href="" class="main-link text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#formModal">طلب خدمة</a>
+            <a href="" class="second-color watchVideo_btn" data-src="https://player.vimeo.com/video/777767896">
+              <div class="d-flex align-items-center gap-3">
+                <div class="header__video-icon second-color rounded-circle">
+                  <i class="fa-solid fa-circle-play fa-2x border-1"></i>
+                </div>
+                <span class="second-color fw-bold">
+                  مشاهدة فيديو
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="header__circle">
+            <div class="header__circle__butterfly p-5 m-5 mt-0 mt-md-5">
+              <div class="rotated-animation"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="221.523"
+                height="253.007" viewBox="0 0 221.523 253.007">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="6.945" y1="3.772" x2="8.082" y2="3.772"
+                    gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#fff" />
+                    <stop offset="1" stop-color="#10bae7" />
+                  </linearGradient>
+                  <linearGradient id="linear-gradient-2" x1="-0.111" y1="4.821" x2="1.398" y2="5.129"
+                    gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#ae4593" />
+                    <stop offset="1" stop-color="#10bae7" />
+                  </linearGradient>
+                </defs>
+                <g id="Group_252" data-name="Group 252" transform="translate(6135.779 2050.889) rotate(14)">
+                  <g id="Butterfly" transform="translate(-6400 -520)">
+                    <path id="Path_63" data-name="Path 63"
+                      d="M187.418,28.2s41.258,39.086,32.176,110.455c-5.669,44.538-41.866,111.188-154.028,110.131,0,0,42.873-5.886,71.47-22.028,0,0-5.778-10.14-40.218-9.457-45.163.9-39.194-10.648-30.145-32.883C79.4,153.112,92.58,137.12,179.817,168.6c0,0-36.83-25.9-46.769-68.822C126.13,69.912,143.3,25.482,187.418,28.2Z"
+                      transform="translate(-52.204 -28.077)" fill="url(#linear-gradient)" />
+                    <path id="Path_64" data-name="Path 64"
+                      d="M206.087,41.5s23.426,23.293,14.76,88.261c-7.234,54.2-83.166,118.714-163.327,109.165,0,0,50.449-.333,76.822-18.515,0,0-3.338-7.892-32.317-2.181-38,7.492-31.277-3.372-20.379-23.909,15.326-28.921,28.746-44.672,97.21-30.469,0,0-27.031-16.883-28.987-52.464C148.5,86.621,169.507,45.712,206.087,41.5Z"
+                      transform="translate(-51.734 -30.326)" fill="url(#linear-gradient-2)" />
+                    <path id="Path_65" data-name="Path 65"
+                      d="M210.675,37.731s31.335,42.4,8.158,108.715c-14.469,41.383-71.553,89.759-168.264,96.7,0,0,50.274-10.6,71.686-24.226,0,0-3.43-10.356-36.38-14.244-43.206-5.095-35.156-15.235-22.019-35.065,18.506-27.93,34.307-41.325,110.988-.067,0,0-29.812-29.337-30.536-71.253C143.809,69.108,169.209,29.339,210.675,37.731Z"
+                      transform="translate(-50.57 -29.504)" fill="#ae4593" opacity="0.3" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;}
+                </style>
+                <g>
+                  <path class="st0" d="M695.34,801.46l-53.57-60.98c-15.52,5.45-31.73,9.72-48.35,12.7l-5.35-29.82
+                  c18.28-3.28,35.99-8.27,52.66-14.82l9.9-3.89l51.09,58.16l26.32-15.19l-24.7-73.45l8.32-6.62c16.22-12.87,31.09-27.7,44.2-44.07
+                  l6.62-8.27l73.3,24.72l15.14-26.29l-57.98-51.18l3.93-9.9c7.68-19.35,13.13-39.55,16.17-60.04l1.57-10.54l75.61-15.1v-30.81
+                  l-75.61-15.22l-1.57-10.53c-3.04-20.48-8.47-40.66-16.15-59.97l-3.93-9.89l57.95-51.26L835.78,263l-73.32,24.63l-6.61-8.27
+                  c-13-16.26-27.87-31.1-44.2-44.13l-8.29-6.61l24.67-73.36l-26.35-15.2l-51.14,58.15l-9.9-3.9c-19.34-7.62-39.51-13.02-59.93-16.06
+                  l-10.53-1.56l-15.31-76.01h-30.6l-15.3,75.98l-10.52,1.56c-20.32,3.01-40.5,8.43-60,16.08l-9.9,3.89l-51.07-58.13l-26.48,15.22
+                  l24.78,73.43l-8.28,6.62c-16.39,13.11-31.21,27.93-44.05,44.06l-6.61,8.3L243.44,263l-15.19,26.24l58,51.31l-3.88,9.86
+                  c-7.64,19.46-13.03,39.6-16.02,59.87l-1.54,10.54l-75.95,15.26l0.06,30.81l75.89,15.2l1.54,10.56
+                  c2.99,20.24,8.38,40.38,16.05,59.85l3.88,9.88l-58.04,51.26l15.2,26.31l73.38-24.75l6.63,8.29c13.05,16.37,27.88,31.18,44.05,44.04
+                  l8.33,6.62l-24.82,73.48l26.47,15.21l51.04-58.16l9.92,3.91c16.64,6.56,34.32,11.53,52.51,14.75l-5.3,29.83
+                  c-16.56-2.94-32.75-7.19-48.28-12.65l-53.49,60.93l-69.54-39.96l26.03-77.07c-12.07-10.31-23.39-21.64-33.81-33.8l-76.96,25.96
+                  l-40.02-69.25l60.86-53.74c-5.34-15.07-9.46-30.46-12.32-45.95l-79.47-15.92l-0.17-80.45l79.64-15.99
+                  c2.85-15.51,6.97-30.9,12.3-45.96L189.6,295.5l40.03-69.11l76.93,25.87c10.31-12.05,21.63-23.36,33.8-33.8l-26.01-77.06
+                  l69.53-39.97l53.54,60.93c15.08-5.34,30.49-9.46,46.03-12.35l16.03-79.63h80.19l16.05,79.67c15.59,2.89,30.99,7.02,46,12.33
+                  l53.6-60.96l69.34,39.99l-25.87,76.95c12.16,10.41,23.52,21.75,33.92,33.87l76.94-25.84l39.88,69.13l-60.7,53.69
+                  c5.36,15.03,9.51,30.47,12.42,46.11l79.26,15.95v80.46l-79.26,15.83c-2.91,15.66-7.07,31.12-12.44,46.17l60.71,53.58l-39.88,69.28
+                  l-76.95-25.95c-10.46,12.19-21.82,23.51-33.93,33.85l25.9,76.99L695.34,801.46z" />
+                  <path class="st0" d="M539.3,686.24c-129.25,0-234.41-105.33-234.41-234.81c0-129.44,105.16-234.75,234.41-234.75
+                  c129.53,0,234.91,105.3,234.91,234.75C774.21,580.91,668.83,686.24,539.3,686.24z M539.3,246.98
+                  c-112.55,0-204.12,91.72-204.12,204.45c0,112.77,91.57,204.52,204.12,204.52c112.83,0,204.61-91.75,204.61-204.52
+                  C743.91,338.7,652.13,246.98,539.3,246.98z" />
+                  <path class="st0" d="M539.52,1009.45c-17.72,0-34.38-6.9-46.92-19.43c-12.54-12.51-19.44-29.17-19.44-46.92V665.05h30.3V943.1
+                  c0,9.65,3.74,18.7,10.55,25.49c6.82,6.82,15.89,10.57,25.52,10.57c9.64,0,18.7-3.75,25.53-10.57c6.81-6.8,10.55-15.86,10.55-25.49
+                  V665.05h30.29V943.1c0,17.73-6.9,34.39-19.43,46.92C573.91,1002.56,557.24,1009.45,539.52,1009.45z" />
+                  <path class="st0" d="M539.37,631.32c-99.02,0-179.59-80.69-179.59-179.89c0-99.17,80.57-179.85,179.59-179.85
+                  c99.24,0,179.99,80.68,179.99,179.85C719.36,550.63,638.61,631.32,539.37,631.32z M539.37,301.87
+                  c-82.32,0-149.29,67.09-149.29,149.56c0,82.48,66.97,149.6,149.29,149.6c82.54,0,149.69-67.12,149.69-149.6
+                  C689.06,368.96,621.91,301.87,539.37,301.87z" />
+                  <path class="st0" d="M446,451.43h-30.3c0-68.33,55.48-123.92,123.67-123.92v30.3C487.88,357.81,446,399.81,446,451.43z" />
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;}
+                </style>
+                <g>
+                  <g>
+                    <path class="st0" d="M904.04,985.92H170.58v-230.1l71.67-71.67l84.87,84.87l88.34-88.29l43.13,43.08l118.63-118.57l58,57.93
+                    l54.81-54.87l27.63,27.7l122.36-102.48l64.01,64.01V985.92z M200.72,955.77H873.9V610.01l-35.66-35.65L715.85,676.85l-25.82-25.88
+                    l-54.77,54.83l-58.02-57.95L458.61,766.42l-43.14-43.08l-88.36,88.3l-84.86-84.87l-41.53,41.53V955.77z" />
+                    <g>
+                      <rect x="247.6" y="305.98" class="st0" width="352.42" height="30.14" />
+                      <rect x="247.6" y="371.05" class="st0" width="176.21" height="30.14" />
+                    </g>
+                    <polygon class="st0" points="200.71,491.04 170.56,491.04 170.56,194.38 904.03,194.38 904.03,285.75 873.89,285.75 
+                    873.89,224.52 200.71,224.52 		" />
+                    <path class="st0" d="M904.03,224.53H170.56V93.92h733.46V224.53z M200.71,194.39h673.18v-70.33H200.71V194.39z" />
+                    <g>
+                      <rect x="247.6" y="144.16" class="st0" width="30.14" height="30.14" />
+                      <rect x="307.88" y="144.16" class="st0" width="30.15" height="30.14" />
+                      <rect x="368.17" y="144.16" class="st0" width="30.14" height="30.14" />
+                    </g>
+                  </g>
+                  <g>
+                    <polygon class="st0" points="79.07,733.67 57.76,712.37 242.24,527.92 327.14,612.79 415.45,524.47 458.61,567.6 577.27,448.98 
+                    635.21,506.93 690.03,452.09 717.68,479.79 840.05,377.26 898.86,436.09 995.52,339.45 1016.83,360.77 898.84,478.72 
+                    838.25,418.08 715.86,520.64 690.02,494.74 635.21,549.56 577.26,491.6 458.62,610.2 415.46,567.09 327.14,655.41 242.24,570.54 
+                        " />
+                    <polygon class="st0" points="1021.25,433.69 991.11,433.69 991.11,365.18 922.56,365.18 922.56,335.05 1021.25,335.05 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;}
+                </style>
+                <g>
+                  <g>
+                    <path class="st0" d="M942.08,734.8H136.93V206.83h805.15V734.8z M167.25,704.47h744.51V237.14H167.25V704.47z" />
+                    <g>
+                      <g>
+                        <path class="st0" d="M400.94,188.17H236.1V94.02h164.84V188.17z M266.42,157.85h104.2v-33.51h-104.2V157.85z" />
+                        <rect x="303.36" y="71.95" class="st0" width="30.32" height="37.23" />
+                      </g>
+                      <g>
+                        <path class="st0" d="M621.92,188.17H457.09V94.02h164.84V188.17z M487.41,157.85h104.2v-33.51h-104.2V157.85z" />
+                        <rect x="524.35" y="71.95" class="st0" width="30.32" height="37.23" />
+                      </g>
+                      <g>
+                        <path class="st0" d="M842.91,188.17H678.08V94.02h164.83V188.17z M708.4,157.85h104.2v-33.51H708.4V157.85z" />
+                        <rect x="745.33" y="71.95" class="st0" width="30.32" height="37.23" />
+                      </g>
+                    </g>
+                    <polygon class="st0" points="593.1,1007.89 562.78,1007.89 562.78,734.8 516.23,734.8 516.23,1007.89 485.92,1007.89 
+                    485.92,704.47 593.1,704.47 		" />
+                    <g>
+                      <rect x="135.25" y="768.53" class="st0" width="808.52" height="30.32" />
+                      <rect x="309.79" y="719.64" class="st0" width="30.32" height="64.06" />
+                      <rect x="738.9" y="719.64" class="st0" width="30.32" height="64.06" />
+                    </g>
+                    <g>
+                      <rect x="606.75" y="125.94" class="st0" width="86.51" height="30.32" />
+                      <polygon class="st0" points="982.51,237.11 96.51,237.11 96.51,125.94 251.27,125.94 251.27,156.26 126.83,156.26 126.83,206.79 
+                      952.19,206.79 952.19,156.26 827.75,156.26 827.75,125.94 982.51,125.94 			" />
+                      <rect x="385.75" y="125.94" class="st0" width="86.51" height="30.32" />
+                    </g>
+                  </g>
+                  <g>
+                    <path class="st0" d="M739.95,620.72H339.06V320.9h400.89V620.72z M369.38,590.4h340.25V351.21H369.38V590.4z" />
+                    <g>
+                      <path class="st0" d="M617.36,545.86h-49.91c-8.37,0-15.16-6.79-15.16-15.16V410.92c0-8.37,6.79-15.16,15.16-15.16h49.91
+                      c12.04,0,23.37,4.69,31.9,13.2c8.53,8.55,13.21,19.87,13.21,31.9v59.89c0,12.05-4.69,23.37-13.2,31.89
+                      C640.73,541.18,629.4,545.86,617.36,545.86z M582.61,515.55h34.75c3.95,0,7.66-1.55,10.46-4.34c2.79-2.79,4.32-6.5,4.32-10.45
+                      v-59.89c0-3.95-1.54-7.66-4.33-10.46c-2.79-2.78-6.5-4.32-10.45-4.32h-34.75V515.55z" />
+                      <g>
+                        <path class="st0" d="M526.71,545.86H496.4v-105c0-3.95-1.54-7.66-4.33-10.45c-2.8-2.8-6.51-4.33-10.46-4.33h-19.96
+                        c-3.94,0-7.66,1.54-10.46,4.34c-2.79,2.79-4.33,6.5-4.33,10.45v105h-30.32v-105c0-12.05,4.69-23.37,13.21-31.89
+                        c8.53-8.53,19.85-13.21,31.89-13.21h19.96c12.05,0,23.37,4.69,31.89,13.21c8.52,8.52,13.21,19.85,13.21,31.89V545.86z" />
+                        <rect x="416.55" y="455.65" class="st0" width="110.17" height="30.32" />
+                      </g>
+                    </g>
+                    <rect x="266.63" y="457.33" class="st0" width="26.95" height="26.95" />
+                    <rect x="785.43" y="457.33" class="st0" width="26.95" height="26.95" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;}
+                </style>
+                <g>
+                  <g>
+                    <path class="st0" d="M917.43,818.73H161.58V364.2c0-10.11,3.95-19.62,11.12-26.79c7.17-7.17,16.68-11.12,26.79-11.12h143.49v27.21
+                    H199.49c-2.84,0-5.52,1.11-7.55,3.15c-2.61,2.61-3.16,5.55-3.16,7.56v427.33h701.43V364.2c0-2.02-0.55-4.98-3.16-7.62
+                    c-1.97-1.95-4.7-3.08-7.55-3.08H736.03v-27.21h143.49c10.06,0,19.57,3.93,26.8,11.06c7.21,7.3,11.12,16.8,11.12,26.85V818.73z" />
+                    <g>
+                      <polygon class="st0" points="859,805.11 831.79,805.11 831.79,411.94 736.03,411.94 736.03,384.73 859,384.73 			" />
+                      <polygon class="st0" points="247.25,805.11 220.03,805.11 220.03,384.73 342.99,384.73 342.99,411.94 247.25,411.94 			" />
+                    </g>
+                    <path class="st0" d="M945.48,883.55H133.53c-12.24,0-23.79-4.77-32.52-13.43c-8.72-8.7-13.5-20.27-13.5-32.59V791.5h904v46.02
+                    c0,12.32-4.79,23.88-13.47,32.56C969.3,878.78,957.75,883.55,945.48,883.55z M114.72,818.71v18.82c0,5.05,1.95,9.77,5.49,13.31
+                    c3.57,3.54,8.31,5.51,13.33,5.51h811.94c5.03,0,9.77-1.96,13.34-5.52c3.52-3.52,5.48-8.25,5.48-13.29v-18.82H114.72z" />
+                  </g>
+                  <g>
+                    <path class="st0" d="M749.63,483.5H329.38V196.28h420.26V483.5z M356.59,456.3h365.83v-232.8H356.59V456.3z" />
+                    <polygon class="st0" points="539.51,356.2 335.48,221.23 350.49,198.54 539.51,323.58 728.52,198.54 743.53,221.23 		" />
+                    <polygon class="st0" points="728.52,481.25 610.33,403.05 625.34,380.37 743.53,458.55 		" />
+                    <rect x="331.22" y="417.2" transform="matrix(0.8341 -0.5516 0.5516 0.8341 -170.9338 293.2683)" class="st0" width="141.71" height="27.21" />
+                  </g>
+                  <g>
+                    <rect x="395.89" y="555.87" class="st0" width="27.21" height="108.85" />
+                    <rect x="655.91" y="555.87" class="st0" width="27.21" height="108.85" />
+                    <rect x="525.9" y="610.29" class="st0" width="27.21" height="108.85" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="d-flex gap-5 align-items-center d-lg-none d-flex mt-4 justify-content-center">
+            <a href="" class="main-link text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#formModal">طلب خدمة</a>
+            <a href="#" class="second-color">
+              <div class="d-flex align-items-center gap-3">
+                <div class="video">
+                  <i class="fa-solid fa-circle-play second-color fa-2x border-1"></i>
+                </div>
+                <span class="second-color fw-bold">
+                  مشاهدة فيديو
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- start service -->
+  <section class="service py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              خدمات اوكودا <sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg"
+                  alt="" class="img-fluid lazy" height="100%" width="100%"></sup>
+            </h2>
+            <p class="main-title__desc">شركة اوكودا هي الشركة الأولى من نوعها التي تنفرد
+              بمجموعة من حلول التصميم والتسويق المبتكرة، فهي
+              شركة متخصصة في التصميمات بجميع أنواعها،</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/e-marketing/service/إدارة-وسائل-التواصل-الإجتماعي.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/e-marketing/service/الاعلانات-الممولة.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/e-marketing/service/التسويق-بالمحتوى.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/e-marketing/service/التصميم-الجرافيكي.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/e-marketing/service/تحسين-محركات-البحث.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/e-marketing/service/تصميم-المواقع-والتطبيقات.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end service -->
+
+  <!-- start contact us -->
+  <section class="contact-us py-5 flout-butterfly bg-light">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              تواصل معنا<sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg" alt=""
+                  class="img-fluid lazy"></sup>
+            </h2>
+            <p class="main-title__desc">مستعد للمضي قدمًا لتنفيذ أفكارك؟ نحن هنا للمساعدة دائمًا، لذلك دعنا نجعل تحقيق
+              تخيلك وأحلامك لواقع بسهولة، اتصل بنا اليوم لاتخاذ الخطوة الأولى واحصل على استشارتك المجانية!</p>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="contact__form mt-4">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الاسم</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="الاسم"
+                    required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رابط الشركة</label>
+                  <input type="url" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="رابط الشركة">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">البريد الالكتروني</label>
+                  <input type="email" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder="البريد الالكتروني">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رقم الهاتف</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder=" رقم الهاتف">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الخدمه</label>
+                  <select name="" id="" class="form-select">
+                    <option value="خدمه1">خدمه 1</option>
+                    <option value="2خدمه">خدمه 2</option>
+                    <option value="3خدمه">خدمه 3</option>
+                    <option value="4خدمه">خدمه 4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رسالتك</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="اكتب رسالتك...."></input>
+                </div>
+                <div class="col-lg-4">
+                  <button class="main-link d-inline-block mt-3">
+                    ارسل
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end contact us -->
+
+  <!-- start footer -->
+  <footer class="pt-5 pb-lg-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+          <div class="footer__content">
+            <h5 class="footer__content__title">تواصل معنا</h5>
+            <div class="footer__content__info">
+              <a href="mailto:" class="d-flex gap-2 align-items-center mb-2">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>sales@ocoda.com</span>
+              </a>
+              <a href="tel:+" class="d-flex gap-2 align-items-center">
+                <i class="fa fa-phone-alt" aria-hidden="true"></i>
+                <span> 920033141</span>
+              </a>
+            </div>
+            <div class="footer__content mt-5">
+              <h5 class="footer__content__title">
+                اشترك ليصلك كل جديد
+              </h5>
+              <form action="" class="footer__content__form d-flex align-items-center justify-content-center mb-3">
+                <input class="p-2" type="email" placeholder="البريد الالكتروني" />
+                <button class="main-link main-link--bg">
+                  اشترك
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+          <div class="footer__content ps-md-3">
+            <h5 class="footer__content__title">روابط سريعة</h5>
+            <div class="footer__content__links quick">
+              <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="من_نحن.html">عن الشركة</a></li>
+                <li><a href="#">المدونة</a></li>
+                <li><a href="content/profile.pdf">بروفايل الشركة</a></li>
+                <li><a href="تواصل_معنا.html">تواصل معنا</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <div class="footer__content text-md-center">
+            <img data-src="content/assets/img/logos/2.png" alt="" class="lazy" height="100%" width="100%" />
+            <p class="footer__content__text">
+              اوكودا كل تصميم لديه قصة، كل تصميم فريد بدايته
+              هنا، حيث يلتقي الفن والمهارة
+            </p>
+            <div class="d-flex align-items-center gap-3 footer__content__links mt-3 justify-content-md-center">
+              <a href="https://www.facebook.com/OcodaAgency" class="footer__content__links__link">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/OcodaAgency" class="footer__content__links__link">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCH-jRWtGpoeh38tFtV_dtqQ" class="footer__content__links__link">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/OcodaAgency/" class="footer__content__links__link">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/ocodaagency/" class="footer__content__links__link">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.behance.net/OcodaAgency" class="footer__content__links__link">
+                <i class="fa-brands fa-behance"></i>
+              </a>
+              <a href="https://vimeo.com/user188602750" class="footer__content__links__link">
+                <i class="fa-brands fa-vimeo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!--  Scripts -->
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <!-- OwlCarousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Lazy loading -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js" defer
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"
+    defer crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- main script -->
+  <script type="text/javascript" src="content/js/main.js" defer crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  
+</body>
+
+</html>

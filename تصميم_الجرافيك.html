@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <title>Ocoda - تصميم الجرافيك</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="content/assets/img/Butterfly.svg">
+  <!-- Bootstrap 5  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.rtl.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+
+  <!-- Owl Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" media="all">
+  <link rel="preconnect" href="https://fonts.gstatic.com" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500&display=swap" rel="stylesheet" media="all">
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="content/css/main-rtl.css" media="all" />
+</head>
+
+<body>
+  <!-- start video modal -->
+  <div class="popup-window">
+    <i class="close-vid-btn fa-solid fa-xmark"></i>
+    <iframe class="lazy" src="" title="" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"></iframe>
+  </div>
+  <!-- end video modal -->
+
+  <!-- start Modal for form -->
+  <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header justify-content-start gap-3">
+          <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5 main-color" id="formModalLabel">اطلب الخدمه الان</h1>
+        </div>
+        <div class="modal-body">
+          <div class="contact__form">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الاسم</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="الاسم"
+                    required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رابط الشركة</label>
+                  <input type="url" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="رابط الشركة">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">البريد الالكتروني</label>
+                  <input type="email" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder="البريد الالكتروني">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رقم الهاتف</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder=" رقم الهاتف">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الخدمه</label>
+                  <select name="" id="" class="form-select">
+                    <option value="خدمه1">خدمه 1</option>
+                    <option value="2خدمه">خدمه 2</option>
+                    <option value="3خدمه">خدمه 3</option>
+                    <option value="4خدمه">خدمه 4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رسالتك</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="اكتب رسالتك...."></input>
+                </div>
+                <div class="col-lg-4">
+                  <button class="main-link d-inline-block mt-3">
+                    ارسل
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- end Modal for form -->
+
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-lg align-items-center">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img data-src="content/assets/img/logos/1.png" alt="Logo" class="d-inline-block align-text-top lazy"
+          height="100%" width="100%">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav text-md-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              خدماتنا
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="تصميم_المواقع.html">خدمات تصميم المواقع</a></li>
+              <li><a class="dropdown-item" href="تصميم_الجرافيك.html">خدمات تصميم الجرافيك</a></li>
+              <li><a class="dropdown-item" href="التسويق.html">خدمات التسويق </a></li>
+              <li><a class="dropdown-item" href="سوشيال_ميديا.html">خدمات السوشيال ميديا</a></li>
+              <li><a class="dropdown-item" href="السيو.html">خدمات السيو</a></li>
+              <li><a class="dropdown-item" href="الموشن_جرافيك.html">خدمات الموشن جرافيك</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="من_نحن.html">عن الشركة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">المدونه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="content/profile.pdf" target="_blank">بروفايل الشركه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="تواصل_معنا.html">تواصل معنا</a>
+          </li>
+        </ul>
+        <div class="navbar__links d-flex gap-4 justify-content-center">
+          <a href="#" class="main-color">
+            <span>en</span>
+            <i class="fa fa-globe" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+" class="main-color">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- start header -->
+  <header class="header mb-3">
+    <div class="container">
+      <div class="row align-items-center ">
+        <div class="col-12 col-lg-6">
+          <div class="header__text mb-5">
+            <h1 class="header__text__title">تصميم الجرافيك</h1>
+            <p class="header__text__desc">اوكودا لا تنفذ المشاريع فقط ... بل تخلق الإبداع وكل ما هو فريد !
+              الرئيسية خدمة تصميم الهوية التجاريةلهوية التجارية</p>
+          </div>
+          <div class="d-flex gap-5 align-items-center d-lg-flex d-none">
+            <a href="" class="main-link text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#formModal">طلب خدمة</a>
+            <a href="" class="second-color watchVideo_btn" data-src="https://player.vimeo.com/video/777767896">
+              <div class="d-flex align-items-center gap-3">
+                <div class="header__video-icon second-color rounded-circle">
+                  <i class="fa-solid fa-circle-play fa-2x border-1"></i>
+                </div>
+                <span class="second-color fw-bold">
+                  مشاهدة فيديو
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="header__circle">
+            <div class="header__circle__butterfly p-5 m-5 mt-0 mt-md-5">
+              <div class="rotated-animation"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="221.523"
+                height="253.007" viewBox="0 0 221.523 253.007">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="6.945" y1="3.772" x2="8.082" y2="3.772"
+                    gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#fff" />
+                    <stop offset="1" stop-color="#10bae7" />
+                  </linearGradient>
+                  <linearGradient id="linear-gradient-2" x1="-0.111" y1="4.821" x2="1.398" y2="5.129"
+                    gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#ae4593" />
+                    <stop offset="1" stop-color="#10bae7" />
+                  </linearGradient>
+                </defs>
+                <g id="Group_252" data-name="Group 252" transform="translate(6135.779 2050.889) rotate(14)">
+                  <g id="Butterfly" transform="translate(-6400 -520)">
+                    <path id="Path_63" data-name="Path 63"
+                      d="M187.418,28.2s41.258,39.086,32.176,110.455c-5.669,44.538-41.866,111.188-154.028,110.131,0,0,42.873-5.886,71.47-22.028,0,0-5.778-10.14-40.218-9.457-45.163.9-39.194-10.648-30.145-32.883C79.4,153.112,92.58,137.12,179.817,168.6c0,0-36.83-25.9-46.769-68.822C126.13,69.912,143.3,25.482,187.418,28.2Z"
+                      transform="translate(-52.204 -28.077)" fill="url(#linear-gradient)" />
+                    <path id="Path_64" data-name="Path 64"
+                      d="M206.087,41.5s23.426,23.293,14.76,88.261c-7.234,54.2-83.166,118.714-163.327,109.165,0,0,50.449-.333,76.822-18.515,0,0-3.338-7.892-32.317-2.181-38,7.492-31.277-3.372-20.379-23.909,15.326-28.921,28.746-44.672,97.21-30.469,0,0-27.031-16.883-28.987-52.464C148.5,86.621,169.507,45.712,206.087,41.5Z"
+                      transform="translate(-51.734 -30.326)" fill="url(#linear-gradient-2)" />
+                    <path id="Path_65" data-name="Path 65"
+                      d="M210.675,37.731s31.335,42.4,8.158,108.715c-14.469,41.383-71.553,89.759-168.264,96.7,0,0,50.274-10.6,71.686-24.226,0,0-3.43-10.356-36.38-14.244-43.206-5.095-35.156-15.235-22.019-35.065,18.506-27.93,34.307-41.325,110.988-.067,0,0-29.812-29.337-30.536-71.253C143.809,69.108,169.209,29.339,210.675,37.731Z"
+                      transform="translate(-50.57 -29.504)" fill="#ae4593" opacity="0.3" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:none;stroke:#5B3483;stroke-width:18;stroke-miterlimit:10;}
+                  .st1{fill:#5B3483;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+                </style>
+                <g>
+                  <g>
+                    <g>
+                      <path class="st0" d="M288.96,385.57c8.24-14.77,18.63-28.65,31.17-41.2c72.94-72.95,191.17-73.01,264.18-0.19
+                      c0.01,0,0.01,0.01,0.01,0.01c0.06,0.06,0.12,0.12,0.18,0.18c4.99,4.99,9.64,10.2,13.96,15.59c0.02,0.01,0.02,0.02,0.03,0.03
+                      c58.68,73.4,54.02,180.75-13.99,248.76c-67.99,68-175.33,72.67-248.72,14.01l-0.01-0.01c-5.41-4.33-10.63-8.99-15.64-14
+                      c-0.08-0.08-0.16-0.16-0.23-0.24c-0.02-0.01-0.03-0.02-0.03-0.03c-42.56-42.72-60.19-100.88-52.89-156.4
+                      c2.33-17.75,7.21-35.23,14.64-51.85" />
+                      <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -206.6467 464.6079)" class="st0" cx="457.51" cy="481.75" rx="187.48" ry="100.96" />
+                      <path class="st0" d="M266.98,452.08c41.11,7.22,90.03,34.3,132.77,77.04c42.74,42.74,69.82,91.66,77.04,132.77" />
+                      <path class="st0" d="M637.64,501.03c-41.11-7.22-90.03-34.3-132.76-77.04c-42.73-42.73-69.81-91.65-77.04-132.75" />
+                      <line class="st0" x1="584.5" y1="344.37" x2="320.13" y2="608.74" />
+                      <line class="st0" x1="584.5" y1="608.74" x2="320.13" y2="344.37" />
+                    </g>
+                  </g>
+                  <g>
+                    <path class="st1" d="M906.66,800.58l-57.76-57.75l-22.31,22.31l57.75,57.75c5.31,5.31,5.31,13.94,0.05,19.2l-27.55,27.37
+                    c-4.98,5.07-13.85,5.03-18.98-0.09L632.39,663.89l-11.08,9.35c-47.31,39.91-107.56,61.89-169.66,61.89
+                    c-145.76,0-264.33-118.57-264.33-264.33c0-9.31,0.5-18.67,1.51-27.94c3.59-35.46,14.2-69.16,31.52-100.19
+                    c46.75-84.01,135.37-136.19,231.3-136.19c72.04,0,139.36,28.5,189.59,80.3c41.09,42.11,67.1,97.56,73.23,156.19
+                    c1,9.16,1.5,18.52,1.5,27.83c0,46.47-12.17,92.11-35.19,131.99l-6.06,10.49l140.87,140.86l22.31-22.31L713.97,607.9
+                    c21.99-42.06,33.56-89.19,33.56-137.1c0-10.44-0.57-20.96-1.68-31.17c-6.87-65.6-36-127.72-81.99-174.85
+                    c-56.19-57.94-131.56-89.86-212.21-89.86c-107.37,0-206.57,58.4-258.87,152.38c-19.42,34.8-31.31,72.6-35.33,112.26
+                    c-1.12,10.29-1.69,20.8-1.69,31.24c0,163.16,132.73,295.89,295.89,295.89c64.67,0,127.56-21.3,178.67-60.24l185.23,185.23
+                    c8.54,8.53,19.88,13.24,31.92,13.24c12.09,0,23.4-4.74,31.73-13.2l27.47-27.27C924.25,846.84,924.25,818.19,906.66,800.58z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;stroke:#FFFFFF;stroke-width:6;stroke-miterlimit:10;}
+                  .st1{fill:#5B3483;stroke:#FFFFFF;stroke-width:6.9851;stroke-miterlimit:10;}
+                  .st2{fill:#5B3483;}
+                  .st3{fill:#5B3483;stroke:#FFFFFF;stroke-width:0.3493;stroke-miterlimit:10;}
+                </style>
+                <g>
+                  <path class="st0" d="M244.73,802.85c-29.47,0-55.85,17.79-62.84,46.55h464.67c-3.88-15.57-10.85-20.18-10.85-28.76v-13.18
+                  c-4.66-4.61-20.18-4.61-27.16-4.61h-33.36v-55.76h29.47c-13.95-20.18-29.47-35.75-40.33-60.53h-453.8
+                  c-9.31,0-17.84-2.39-17.84-15.57V301.77c0-6.19,8.53-15.57,17.84-15.57h85.59v-55.76h-85.59c-38.02,0-76.02,31.78-76.02,71.33
+                  v369.22c0,46.55,38,76.1,76.02,76.1h162.9v55.76H244.73z M329.28,757.89h190.05v33.36H329.28V757.89z M727.23,230.44H214.15v55.76
+                  h513.08c9.31,0,15.52,9.38,15.52,15.57v20.18c15.51-2.38,35.68-3.97,55.85-3.97v-16.21C798.6,262.22,765.25,230.44,727.23,230.44z" />
+                  <path class="st1" d="M635.7,691.16v-4.61l0,0C635.7,686.55,635.7,686.55,635.7,691.16z" />
+                  <path class="st0" d="M800.93,331.16c-138.07,0-243.58,111.69-243.58,248.32c0,129.04,101.05,236.47,234.77,241.01v-31.02
+                  c-112.25-4.82-201.41-101.14-201.41-209.99c0-116.45,93.86-212.57,210.22-212.57c114.04,0,207.9,96.12,207.9,212.57
+                  c0,108.65-88.84,204.83-198.68,209.96v31.01c125.68-5.03,234.36-112.25,234.36-240.97C1044.51,442.85,930.47,331.16,800.93,331.16z
+                  " />
+                  <rect x="166.38" y="356.1" class="st2" width="337.44" height="39.56" />
+                  <rect x="161.73" y="427.44" class="st2" width="245.9" height="26.37" />
+                  <rect x="425.47" y="427.44" class="st2" width="78.35" height="26.37" />
+                  <rect x="166.38" y="487.97" class="st2" width="176.85" height="15.41" />
+                  <rect x="361.08" y="487.97" class="st2" width="64.39" height="15.41" />
+                  <rect x="161.73" y="539.12" class="st2" width="245.9" height="20.18" />
+                  <rect x="425.47" y="539.12" class="st2" width="78.35" height="20.18" />
+                  <rect x="161.73" y="594.88" class="st2" width="245.9" height="22.56" />
+                  <rect x="425.47" y="594.88" class="st2" width="40.34" height="22.56" />
+                  <path class="st3" d="M805.59,395.67c-100.86,0-187.74,78.32-187.74,174.44c0,100.88,86.88,187.78,187.74,187.78
+                  c98.51,0,178.41-86.9,178.41-187.78C984,473.99,904.1,395.67,805.59,395.67z M778.43,418.07c-20.17,20.17-35.68,40.35-48.86,65.13
+                  c-9.31,0-24.84-9.21-38.02-22.4C716.38,442.85,742.75,422.83,778.43,418.07z M684.57,473.99c13.97,9.21,27.16,13.98,45,24.78
+                  c-9.31,17.8-13.19,40.36-13.19,71.34H645C645,532.14,662.86,498.77,684.57,473.99z M645,581.7h71.38
+                  c0,31.14,3.88,59.74,13.19,84.68c-9.31,4.61-24.84,10.8-40.34,20.18C662.86,661.61,645,621.42,645,581.7z M700.86,693.55
+                  c10.87-6.99,21.72-9.38,35.68-22.56c10.87,22.56,21.72,46.55,41.89,58.14C747.41,726.91,720.26,717.54,700.86,693.55z
+                   M798.6,731.52c-20.17-13.98-40.34-37.97-48.87-60.53c10.86-4.61,31.02-4.61,48.87-4.61V731.52z M798.6,648.43
+                  c-20.17,0-40.34,10.96-55.85,13.18c-13.18-26.37-15.52-51.15-15.52-79.91h71.37V648.43z M798.6,570.11h-71.37
+                  c0-30.98,2.34-44.17,9.31-68.95c17.84,2.22,41.89,8.42,62.06,8.42V570.11z M798.6,498.77c-20.17,0-40.34-4.6-55.85-10.8
+                  c11.63-29.55,34.13-49.73,55.85-69.9V498.77z M959.96,570.11h-69.82c0-30.98-6.2-53.54-10.85-71.34
+                  c13.18-10.8,27.15-15.57,40.33-24.78C945.99,498.77,955.3,532.14,959.96,570.11z M914.97,460.8c-13.19,13.19-31.03,22.4-38.02,22.4
+                  c-13.19-24.78-28.71-44.96-48.87-65.13C863.76,422.83,890.14,442.85,914.97,460.8z M810.24,418.07
+                  c20.16,20.17,40.34,40.35,53.52,69.9c-20.17,6.2-35.68,10.8-53.52,10.8V418.07z M810.24,509.58c17.84,0,38-6.2,53.52-8.42
+                  c13.19,24.78,15.53,37.97,15.53,68.95h-69.05V509.58z M810.24,581.7h69.05c0,28.76-2.34,53.54-15.53,79.91
+                  c-20.17-2.22-35.68-13.18-53.52-13.18V581.7z M810.24,731.52v-65.14c17.84,0,31.03,0,48.87,4.61
+                  C843.59,693.55,828.08,717.54,810.24,731.52z M828.08,729.13c15.51-11.59,31.03-35.58,38-58.14
+                  c15.52,13.18,26.39,15.57,38.02,22.56C883.94,717.54,859.11,726.91,828.08,729.13z M914.97,686.56
+                  c-13.19-9.38-28.71-15.57-38.02-20.18c6.99-24.94,13.19-53.54,13.19-84.68h69.82C955.3,621.42,945.99,661.61,914.97,686.56z" />
+                </g>
+              </svg>
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;stroke:#FFFFFF;stroke-width:1.2219;stroke-miterlimit:10;}
+                  .st1{fill:none;stroke:#5B3483;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                </style>
+                <g>
+                  <g>
+                    <path class="st0" d="M930.33,404.92v-287.6c0-42.07-35.41-76.4-78.87-76.4H227.71c-43.56,0-79.02,34.33-79.02,76.4v845.2
+                    c0,42.02,35.46,76.4,79.02,76.4h623.75c43.46,0,78.87-34.38,78.87-76.4v-533.6h-31.11v533.6c0,24.93-21.44,45.23-47.76,45.23
+                    H227.71c-26.38,0-47.92-20.3-47.92-45.23v-845.2c0-25,21.54-45.3,47.92-45.3h623.75c26.32,0,47.76,20.3,47.76,45.3v287.6H930.33z" />
+                  </g>
+                  <g>
+                    <g>
+                      <path class="st1" d="M255.41,160.98v754.87h568.4V160.98H255.41z M442.33,601.17l-40.86-43.81c146.1-131.51,280.48,0,280.48,0
+                      l-43.81,43.81C531.45,507.67,442.33,601.17,442.33,601.17z M589.89,654.01c0,25.01-20.25,45.28-45.27,45.28
+                      c-25.01,0-45.3-20.27-45.3-45.28c0-25.03,20.29-45.29,45.3-45.29C569.64,608.72,589.89,628.98,589.89,654.01z M715.58,523.88
+                      c-189.94-163.43-352.12,0-352.12,0l-46.74-51.29c233.78-205.99,445.58,2.93,445.58,2.93L715.58,523.88z" />
+                    </g>
+                  </g>
+                  <g>
+                    <path class="st0" d="M546.15,948.34H533c-2.96,0-5.33,2.27-5.33,5.18v10.32c0,2.87,2.37,5.29,5.33,5.29h13.14
+                    c2.86,0,5.23-2.41,5.23-5.29v-10.32C551.38,950.61,549.01,948.34,546.15,948.34z" />
+                    <path class="st0" d="M539.53,932.14c-14.71,0-26.67,11.81-26.67,26.57s11.96,26.62,26.67,26.62c14.77,0,26.72-11.86,26.72-26.62
+                    S554.3,932.14,539.53,932.14z M555.83,963.84c0,5.45-4.34,9.78-9.68,9.78h-13.34c-5.33,0-9.52-4.33-9.52-9.78v-10.31
+                    c0-5.39,4.19-9.68,9.71-9.68h13.15c5.34,0,9.68,4.29,9.68,9.68V963.84z" />
+                  </g>
+                </g>
+              </svg>              
+            </div>
+            <div class="header__circle__agent d-md-block d-none">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#5B3483;stroke:#FFFFFF;stroke-width:7;stroke-miterlimit:10;}
+                  .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#5B3483;stroke:#FFFFFF;stroke-width:7;stroke-miterlimit:10;}
+                </style>
+                <g>
+                  <path class="st0" d="M886.7,186.95C797.84,98.09,675.09,43.14,539.51,43.14S281.18,98.09,192.32,186.95
+                  C103.47,275.8,48.51,398.55,48.51,534.14c0,49.59,7.35,97.47,21.03,142.59h51.15c-12.73-37.42-20.6-77.08-22.83-118.25h125.52
+                  c2.13,68.07,13.16,132.56,31.28,190.59c-31.49,5.68-61.62,12.29-90.14,19.73c-11.91-18.99-22.41-38.94-31.36-59.71H80.6
+                  c24.88,65.22,63.26,123.77,111.72,172.23c88.86,88.86,211.61,143.82,347.19,143.82c60.57,0,118.58-10.98,172.15-31.04l-22.34-94.15
+                  c-36.57,41.05-79.46,67.64-125.46,74.64V773.72c32.88,0.46,65.11,1.84,96.47,4.08l-11.76-49.58c-27.69-1.73-55.97-2.81-84.71-3.2
+                  V558.48h243.07c-1.43,43.05-6.6,84.42-15.01,123.3l43.49,27.52c11.55-47.22,18.57-97.94,20.23-150.82h125.52
+                  c-4.03,74.17-26.33,143.48-62.47,203.5l41.16,26.04c44.85-74.08,70.66-160.97,70.66-253.88
+                  C1030.51,398.55,975.55,275.8,886.7,186.95z M226.75,221.38c37.83-37.83,82.48-68.83,131.95-91.02
+                  c-16.7,17.99-32.21,38.41-46.33,60.96c-15.46,24.71-29.27,52-41.15,81.43c-26.63-4.61-52.17-9.88-76.45-15.74
+                  C204.78,244.56,215.46,232.66,226.75,221.38z M223.38,509.79H97.86c4.18-76.99,28.05-148.75,66.66-210.31
+                  c28.52,7.43,58.65,14.04,90.14,19.72C236.54,377.24,225.51,441.73,223.38,509.79z M226.75,846.9
+                  c-11.29-11.29-21.97-23.19-31.98-35.63c24.28-5.87,49.82-11.13,76.45-15.74c11.88,29.42,25.69,56.72,41.15,81.42
+                  c14.12,22.55,29.63,42.97,46.33,60.96C309.23,915.73,264.58,884.72,226.75,846.9z M515.16,974.59
+                  c-62.25-9.47-118.81-54.81-161.7-123.32c-12.14-19.39-23.17-40.6-32.91-63.36c6.07-0.82,12.18-1.62,18.35-2.38
+                  c55.61-6.87,114.77-10.95,176.26-11.81V974.59z M515.16,725.02c-63.43,0.87-124.58,5.09-182.16,12.2
+                  c-10.09,1.24-20.07,2.58-29.94,4c-17.85-55.05-28.79-116.95-30.97-182.74h243.07V725.02z M515.16,509.79H272.09
+                  c2.18-65.79,13.12-127.68,30.97-182.74c9.87,1.42,19.85,2.76,29.94,4.01c57.58,7.11,118.73,11.33,182.16,12.19V509.79z
+                   M515.16,294.55c-61.49-0.85-120.65-4.94-176.26-11.81c-6.17-0.76-12.28-1.55-18.35-2.38c9.74-22.76,20.77-43.96,32.91-63.36
+                  c42.89-68.5,99.45-113.85,161.7-123.32V294.55z M563.86,93.68c62.25,9.47,118.81,54.82,161.7,123.32
+                  c12.14,19.4,23.17,40.6,32.91,63.36c-6.07,0.83-12.18,1.62-18.35,2.38c-55.61,6.87-114.77,10.96-176.26,11.81V93.68z
+                   M563.86,509.79V343.25c63.43-0.86,124.58-5.08,182.16-12.19c10.09-1.25,20.07-2.59,29.94-4.01
+                  c17.85,55.06,28.79,116.95,30.97,182.74H563.86z M766.64,191.32c-14.11-22.55-29.62-42.97-46.32-60.96
+                  c49.47,22.19,94.12,53.19,131.95,91.02c11.29,11.28,21.97,23.18,31.98,35.63c-24.28,5.86-49.82,11.13-76.45,15.74
+                  C795.92,243.32,782.11,216.03,766.64,191.32z M855.64,509.79c-2.13-68.06-13.16-132.55-31.28-190.59
+                  c31.49-5.68,61.62-12.29,90.14-19.72c38.61,61.56,62.48,133.32,66.66,210.31H855.64z" />
+                  <path class="st1" d="M884.05,876.72l77.43,108.49c1.3,1.82,0.87,4.36-0.95,5.66l-63.15,45.07c-1.82,1.3-4.36,0.87-5.66-0.95
+                  L814.3,926.5l-53.78,38.39c-1.13,0.81-2.48,0.99-3.78,0.5c-1.3-0.49-2.2-1.51-2.52-2.86l-66.65-280.9
+                  c-0.39-1.64,0.22-3.26,1.59-4.24c1.37-0.98,3.1-1.03,4.53-0.13L937.65,831.6c1.18,0.74,1.85,1.92,1.89,3.32
+                  c0.04,1.39-0.57,2.61-1.7,3.42L884.05,876.72L884.05,876.72z" />
+                </g>
+              </svg>
+              
+            </div>
+          </div>
+          <div class="d-flex gap-5 align-items-center d-lg-none d-flex mt-4 justify-content-center">
+            <a href="" class="main-link text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#formModal">طلب خدمة</a>
+            <a href="#" class="second-color">
+              <div class="d-flex align-items-center gap-3">
+                <div class="video">
+                  <i class="fa-solid fa-circle-play second-color fa-2x border-1"></i>
+                </div>
+                <span class="second-color fw-bold">
+                  مشاهدة فيديو
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- start cover -->
+  <section class="cover py-5">
+    <div class="container">
+      <div class="cover__content flout-butterfly">
+        <div class="main-title text-center">
+          <h2 class="main-title__text text--color mb-2">
+            تصميم الجرافيك<sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg" alt=""
+                class="img-fluid lazy" height="100%" width="100%"></sup>
+          </h2>
+          <h5 class="main-title__desc text--color my-4">لتعزيز مكانتك التنافسية في السوق</h5>
+          <p class="text--color mb-4 text-start">خدمة تصميم الهوية التجارية للشركات تعد خطوة أساسية ووسيلتك المثالية
+            للتعبير عن شخصيتك وجوهرك، فهي الطابع الخاص والفريد الذي يُضفي على علامتك التجارية عنصر الحيوية والانفراد
+            والاختلاف، فهي مزيج من العناصر التي تُمثل الواجهة المرئية لعلامتك التجارية لتقوم بربط الأفكار بينك وبين عقول
+            عملائك المحتملين، فهي تجذب انتباه العميل لكي يتذكرك عبر خدمة تصميم الهوية التجارية لكي تميزك وسط المنافسين،
+            لتزداد ثقته تجاه علامتك التجارية!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end cover -->
+
+  <!-- start service -->
+  <section class="service py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              خدمات اوكودا <sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg"
+                  alt="" class="img-fluid lazy" height="100%" width="100%"></sup>
+            </h2>
+            <p class="main-title__desc">شركة اوكودا هي الشركة الأولى من نوعها التي تنفرد
+              بمجموعة من حلول التصميم والتسويق المبتكرة، فهي
+              شركة متخصصة في التصميمات بجميع أنواعها،</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/graphic_design/service/تصاميم-متنوعة.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/graphic_design/service/تصميم-بروشور.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/graphic_design/service/تصميم-شعار-احترافي.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/graphic_design/service/تصميم-فلاير.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/graphic_design/service/تصميم-كارت-شخصي.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service__card" onclick="window.location.href = '#';">
+              <div class="service__card__img">
+                <img data-src="content/assets/img/graphic_design/service/ملف-الشركة.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <div class="service__card__content">
+                <h3 class="service__card__content__title">الهوية التجارية</h3>
+                <p class="service__card__content__desc">لأن هويتك التجارية هي مظهرك الخارجي الذي
+                  يجذب عملائك إليك ويخبرهم من أنت!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end service -->
+
+  <!-- start gallery -->
+  <section class="gallery py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              اعمالنا <sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg" alt=""
+                  class="img-fluid lazy" height="100%" width="100%"></sup>
+            </h2>
+            <p class="main-title__desc">هناك حقيقة مثبتة منذ زمن طويل وهى ان المحتوى المقروء لصفحة ما سيلهى القارئ عن
+              التركيز على الشكل الخارجى للنص او شكل توضع الفقرات فى الصفحة التى يقررأها</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery__cards mt-5">
+      <div class="row g-0 gap-0">
+        <div class="col-6 col-lg-3" data-related="web_design">
+          <div class="gallery__cards__card" onclick="window.location.href = '#';">
+            <img data-src="content/assets/img/global_sections/gallery/bike.jpg" alt="" class="lazy" height="100%" width="100%">
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-related="web_design">
+          <div class="gallery__cards__card" onclick="window.location.href = '#';">
+            <img data-src="content/assets/img/global_sections/gallery/furniture.jpg" alt="" class="lazy" height="100%"
+              width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end gallery -->
+
+  <!-- start packages -->
+  <section class="packages py-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              الباقات <sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg" alt=""
+                  class="img-fluid lazy" height="100%" width="100%"></sup>
+            </h2>
+            <p class="main-title__desc">صمم هويتك الرقمية الكاملة الآن لكل حساباتك على منصات التواصل الاجتماعي وجميع
+              المنصات الرقمية، مع اوكودا ستحصل على هوية رقمية احترافية من خلال تصميمات عالية الجودة وإبداعية لتساعد
+              عملائك على تذكرك واختيارك، لتنجح في تمييز نشاطك وسط منافسيك وتنفرد عنهم بشكل جذاب، لتنافس بقوة وتكسب
+              المزيد من العملاء المحتملين بكل سهولة</p>
+          </div>
+        </div>
+      </div>
+      <div class="package mt-4">
+        <div class="row g-4">
+          <div class="col-12 col-lg-4">
+            <div class="packages__package">
+              <div class="wrap">
+                <span class="packages__package__price">13$</span>
+                <div class="packages__package__icon">
+                  <img data-src="content/assets/img/graphic_design/packages/الباقة-الفضية.png" alt="" class="img-fluid lazy"
+                    height="100%" width="100%">
+                </div>
+                <h3 class="packages__package__title">الباقة الفضيه</h3>
+                <p class="packages__package__desc">تصميمات 2 حسابات مختارة (فيسبوك -تويتر - انستقرام-لينكد ان
+                  -يوتيوب-بيهانس - بينترست- سنابشات)
+                  <br><br>
+                  تصميم 16 منشور شهرياً
+                </p>
+                <ul class="packages__package__points">
+                  <li>تصميم لوجو: 1 خيار | 2 تعديل</li>
+                  <li>ملف تعريفي 10 صفحات</li>
+                  <li>ورق مراسلات وجه واحد</li>
+                  <li>تصميم كارت شخصي واجهين</li>
+                </ul>
+              </div>
+              <a href="#" class="main-link d-inline-block my-2 w-75 align-self-center">اطلب الان</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="packages__package">
+              <div class="wrap">
+                <span class="packages__package__price">25$</span>
+                <div class="packages__package__icon">
+                  <img data-src="content/assets/img/graphic_design/packages/الباقة-الذهبية.png" alt="" class="img-fluid lazy"
+                    height="100%" width="100%">
+                </div>
+                <h3 class="packages__package__title">الباقة الذهبية</h3>
+                <p class="packages__package__desc">تصميمات 2 حسابات مختارة (فيسبوك -تويتر - انستقرام-لينكد ان
+                  -يوتيوب-بيهانس - بينترست- سنابشات)
+                  <br><br>
+                  تصميم 16 منشور شهرياً
+                </p>
+                <ul class="packages__package__points">
+                  <li>تصميم لوجو: 1 خيار | 2 تعديل</li>
+                  <li>ملف تعريفي 10 صفحات</li>
+                  <li>ورق مراسلات وجه واحد</li>
+                  <li>تصميم كارت شخصي واجهين</li>
+                  <li>تصميم فولدر جيب واحد</li>
+                  <li>تصميم ختم للشركات</li>
+                  <li>تصميم بروشور 6 طيات</li>
+                  <li>تصميم مج و كوستر</li>
+                </ul>
+              </div>
+              <a href="#" class="main-link d-inline-block my-2 w-75 align-self-center">اطلب الان</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="packages__package">
+              <div class="wrap">
+                <span class="packages__package__price">60$</span>
+                <div class="packages__package__icon">
+                  <img data-src="content/assets/img/graphic_design/packages/الباقة-الماسية.png" alt="" class="img-fluid lazy"
+                    height="100%" width="100%">
+                </div>
+                <h3 class="packages__package__title">الباقة الذهبية</h3>
+                <p class="packages__package__desc">تصميمات 2 حسابات مختارة (فيسبوك -تويتر - انستقرام-لينكد ان
+                  -يوتيوب-بيهانس - بينترست- سنابشات)
+                  <br><br>
+                  تصميم 16 منشور شهرياً
+                </p>
+                <ul class="packages__package__points">
+                  <li>تصميم لوجو: 1 خيار | 2 تعديل</li>
+                  <li>ملف تعريفي 10 صفحات</li>
+                  <li>ورق مراسلات وجه واحد</li>
+                  <li>تصميم كارت شخصي واجهين</li>
+                  <li>سندات القبض والصرف</li>
+                  <li>تصميم فاتورة مقاس A5</li>
+                  <li>تصميم فولدر جيب واحد</li>
+                  <li>تصميم ختم للشركات</li>
+                  <li>تصميم بروشور 6 طيات</li>
+                  <li>تصميم مج و كوستر</li>
+                </ul>
+              </div>
+              <a href="#" class="main-link d-inline-block my-2 w-75 align-self-center">اطلب الان</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="packages__package">
+              <div class="wrap">
+                <span class="packages__package__price">60$</span>
+                <div class="packages__package__icon">
+                  <img data-src="content/assets/img/graphic_design/packages/باقة-الشركات-الناشئة.png" alt="" class="img-fluid lazy"
+                    height="100%" width="100%">
+                </div>
+                <h3 class="packages__package__title">الباقة الشركات الناشئة</h3>
+                <p class="packages__package__desc">تصميمات 2 حسابات مختارة (فيسبوك -تويتر - انستقرام-لينكد ان
+                  -يوتيوب-بيهانس - بينترست- سنابشات)
+                  <br><br>
+                  تصميم 16 منشور شهرياً
+                </p>
+                <ul class="packages__package__points">
+                  <li>تصميم لوجو: 1 خيار | 2 تعديل</li>
+                  <li>ملف تعريفي 10 صفحات</li>
+                  <li>ورق مراسلات وجه واحد</li>
+                  <li>تصميم كارت شخصي واجهين</li>
+                  <li>سندات القبض والصرف</li>
+                  <li>تصميم فاتورة مقاس A5</li>
+                  <li>تصميم فولدر جيب واحد</li>
+                  <li>تصميم ختم للشركات</li>
+                  <li>تصميم بروشور 6 طيات</li>
+                  <li>تصميم مج و كوستر</li>
+                </ul>
+              </div>
+              <a href="#" class="main-link d-inline-block my-2 w-75 align-self-center">اطلب الان</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end packages -->
+
+  <!-- start why-ocoda -->
+  <section class="why-ocoda py-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              لماذا اوكودا <sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg"
+                  alt="" class="img-fluid lazy" height="100%" width="100%"></sup> ؟
+            </h2>
+            <p class="main-title__desc text-black">هل تبحث عن الأفضل؟ أم المُميز؟ أم ترغب في كلاهما معًا! في اوكودا
+              بخبرتنا الطويلة وقدرتنا على التركيز الحقيقي على رضا العملاء، تمكنا من أن نوفر لهم الأفضل والمميز بناحية
+              إبداعية فريدة</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-ocoda__reasons">
+        <div class="row justify-content-between g-5">
+          <div class="col-12 col-md-4">
+            <div class="why-ocoda__reasons__reason">
+              <h5 class="why-ocoda__reasons__reason__title">1- أفضل خدمة</h5>
+              <div class="why-ocoda__reasons__reason__icon">
+                <img data-src="content/assets/img/graphic_design/why_ocoda/أفضل-خدمة.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <p class="why-ocoda__reasons__reason__desc">نحن نعتز بخبرتنا الطويلة التي دامت لسنوات من الجودة والالتزام
+                وتقدير احتياجات العملاء، وتتمثل خبرتنا في توفير قدرة ممتازة على العمل وتحقيق رضا عملائنا من بداية
+                التصميم</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="why-ocoda__reasons__reason">
+              <h5 class="why-ocoda__reasons__reason__title">2- ألاعلى جودة</h5>
+              <div class="why-ocoda__reasons__reason__icon">
+                <img data-src="content/assets/img/graphic_design/why_ocoda/الأعلى-جودة.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <p class="why-ocoda__reasons__reason__desc">في اوكودا نحاول على قدر الإمكان
+                توفير التكاليف عن العملاء، حيث
+                نقدم أسعار تنافسية مقابل
+                مستوى فائق من الإتقان، العمل
+                بحرفية</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="why-ocoda__reasons__reason">
+              <h5 class="why-ocoda__reasons__reason__title">3-  الأكثر تميزًا</h5>
+              <div class="why-ocoda__reasons__reason__icon">
+                <img data-src="content/assets/img/graphic_design/why_ocoda/الأكثر-تميزاً.png" alt="" class="img-fluid lazy" height="100%"
+                  width="100%">
+              </div>
+              <p class="why-ocoda__reasons__reason__desc">في اوكودا نعمل على توفير بيئة عمل متنوعة وشاملة وتفاعلية مع
+                عملائنا تقوم على الاحترام المتبادل والثقة والتعاون، حيث يجسد فريقنا هذه القيم من خلال عملنا الشاق و
+                التزامنا
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- end why-ocoda -->
+
+  <!-- start cover -->
+  <section class="cover py-5">
+    <div class="container">
+      <div class="cover__content flout-butterfly">
+        <div class="main-title text-center">
+          <h2 class="main-title__text text--color mb-2">
+            تصميم مواقع <sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg" alt=""
+                class="img-fluid lazy" height="100%" width="100%"></sup>
+          </h2>
+          <p class="main-title__desc text--color mb-3">لتصميم موقع مُبتكر ومُميز لعلامتك التجارية</p>
+          <h3 class="text--color mb-4">اطلب موقعك بسعر يبدا من 2000 ريال </h3>
+          <a href="#" class="main-link main-link--bg">طلب خدمة</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end cover -->
+
+  <!-- start contact us -->
+  <section class="contact-us py-5 flout-butterfly bg-light">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <div class="main-title text-center">
+            <h2 class="main-title__text">
+              تواصل معنا<sup class="butterfly_icon"><img data-src="content/assets/img/small_dark_butterfly.svg" alt=""
+                  class="img-fluid lazy"></sup>
+            </h2>
+            <p class="main-title__desc">مستعد للمضي قدمًا لتنفيذ أفكارك؟ نحن هنا للمساعدة دائمًا، لذلك دعنا نجعل تحقيق
+              تخيلك وأحلامك لواقع بسهولة، اتصل بنا اليوم لاتخاذ الخطوة الأولى واحصل على استشارتك المجانية!</p>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="contact__form mt-4">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الاسم</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="الاسم"
+                    required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رابط الشركة</label>
+                  <input type="url" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="رابط الشركة">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">البريد الالكتروني</label>
+                  <input type="email" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder="البريد الالكتروني">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رقم الهاتف</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" required=""
+                    placeholder=" رقم الهاتف">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">الخدمه</label>
+                  <select name="" id="" class="form-select">
+                    <option value="خدمه1">خدمه 1</option>
+                    <option value="2خدمه">خدمه 2</option>
+                    <option value="3خدمه">خدمه 3</option>
+                    <option value="4خدمه">خدمه 4</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="" class="label-form mb-2 ms-1">رسالتك</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="اكتب رسالتك...."></input>
+                </div>
+                <div class="col-lg-4">
+                  <button class="main-link d-inline-block mt-3">
+                    ارسل
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end contact us -->
+
+  <!-- start footer -->
+  <footer class="pt-5 pb-lg-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+          <div class="footer__content">
+            <h5 class="footer__content__title">تواصل معنا</h5>
+            <div class="footer__content__info">
+              <a href="mailto:" class="d-flex gap-2 align-items-center mb-2">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>sales@ocoda.com</span>
+              </a>
+              <a href="tel:+" class="d-flex gap-2 align-items-center">
+                <i class="fa fa-phone-alt" aria-hidden="true"></i>
+                <span> 920033141</span>
+              </a>
+            </div>
+            <div class="footer__content mt-5">
+              <h5 class="footer__content__title">
+                اشترك ليصلك كل جديد
+              </h5>
+              <form action="" class="footer__content__form d-flex align-items-center justify-content-center mb-3">
+                <input class="p-2" type="email" placeholder="البريد الالكتروني" />
+                <button class="main-link main-link--bg">
+                  اشترك
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+          <div class="footer__content ps-md-3">
+            <h5 class="footer__content__title">روابط سريعة</h5>
+            <div class="footer__content__links quick">
+              <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="من_نحن.html">عن الشركة</a></li>
+                <li><a href="#">المدونة</a></li>
+                <li><a href="content/profile.pdf">بروفايل الشركة</a></li>
+                <li><a href="تواصل_معنا.html">تواصل معنا</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <div class="footer__content text-md-center">
+            <img data-src="content/assets/img/logos/2.png" alt="" class="lazy" height="100%" width="100%" />
+            <p class="footer__content__text">
+              اوكودا كل تصميم لديه قصة، كل تصميم فريد بدايته
+              هنا، حيث يلتقي الفن والمهارة
+            </p>
+            <div class="d-flex align-items-center gap-3 footer__content__links mt-3 justify-content-md-center">
+              <a href="https://www.facebook.com/OcodaAgency" class="footer__content__links__link">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/OcodaAgency" class="footer__content__links__link">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCH-jRWtGpoeh38tFtV_dtqQ" class="footer__content__links__link">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/OcodaAgency/" class="footer__content__links__link">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/ocodaagency/" class="footer__content__links__link">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.behance.net/OcodaAgency" class="footer__content__links__link">
+                <i class="fa-brands fa-behance"></i>
+              </a>
+              <a href="https://vimeo.com/user188602750" class="footer__content__links__link">
+                <i class="fa-brands fa-vimeo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!--  Scripts -->
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <!-- OwlCarousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Lazy loading -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js" defer
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"
+    defer crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- main script -->
+  <script type="text/javascript" src="content/js/main.js" defer crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  
+</body>
+
+</html>
